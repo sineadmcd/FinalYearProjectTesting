@@ -14,12 +14,11 @@ public class Download {
 		int u = (int)Math.random()*10;	//Consider changing this syntax to something like: (int)(Math.random()*x)
         	System.out.println(u);
 
-		u++;
-  			j=u;
+		j=u++;
 		System.out.println(i);
 	   	String url="https://dl.dropboxusercontent.com/u/73386806/helloworld.txt";
 	   	String filename ="C:/Users/Desktop/WindowsApplication.txt";
-		if(!url.equals(filename)){
+		if(url!=filename){
 	   		try{
 
 	   				URL download=new URL(url);
@@ -32,7 +31,6 @@ public class Download {
 	   				fileOut.close();
 	   				rbc.close();
 		}catch(Exception e){ e.printStackTrace(); }
-		   i++;
-		return i;
+		 return i++;
 }
 }
